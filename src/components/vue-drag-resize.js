@@ -116,7 +116,7 @@ export default {
             type: [String, Number],
             default: 'auto',
             validator: function (val) {
-                let valid = (typeof val === 'string') ? val === 'auto' : val >= 0;
+                let valid = (typeof val === 'string') ? val === 'auto' : val >= -99999;
                 return valid
             }
         },
@@ -776,7 +776,7 @@ export default {
         },
 
         z(val) {
-            if (val >= 0 || val === 'auto') {
+            if (val >= -99999 || val === 'auto') {
                 this.zIndex = val
             }
         },
